@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jDb-xl-O9s">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="RxV-Ba-OQv">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBar" id="jDb-xl-O9s" customClass="TabBarController" customModule="Technical_Task_For_Flypika" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eno-NF-Ud6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="7SH-M8-Ygj" kind="relationship" relationship="viewControllers" id="zYD-o9-NEY"/>
+                        <segue destination="bD3-oh-sIE" kind="relationship" relationship="viewControllers" id="dqh-JO-oLb"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8q8-90-SDb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1177" y="-491"/>
+        </scene>
+        <!--News Feed View Controller-->
+        <scene sceneID="APh-Eo-5hS">
+            <objects>
+                <viewController id="7SH-M8-Ygj" customClass="NewsFeedViewController" customModule="Technical_Task_For_Flypika" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vkG-wx-qaH">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Zfr-JW-UEi">
+                                <rect key="frame" x="0.0" y="44" width="390" height="717"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="7SH-M8-Ygj" id="3G8-SR-155"/>
+                                    <outlet property="delegate" destination="7SH-M8-Ygj" id="dnr-uI-WLf"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KMP-VY-b3Q"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Zfr-JW-UEi" firstAttribute="trailing" secondItem="KMP-VY-b3Q" secondAttribute="trailing" id="Ll4-xi-abM"/>
+                            <constraint firstItem="Zfr-JW-UEi" firstAttribute="top" secondItem="KMP-VY-b3Q" secondAttribute="top" id="iif-a9-GbK"/>
+                            <constraint firstItem="Zfr-JW-UEi" firstAttribute="bottom" secondItem="KMP-VY-b3Q" secondAttribute="bottom" id="ndG-2d-l89"/>
+                            <constraint firstItem="Zfr-JW-UEi" firstAttribute="leading" secondItem="KMP-VY-b3Q" secondAttribute="leading" id="vLo-Un-wKl"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="News" id="W7n-v6-xlc"/>
+                    <connections>
+                        <outlet property="table" destination="Zfr-JW-UEi" id="T18-2A-lPK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d4Q-Fs-EhC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2043.0769230769231" y="249.52606635071089"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="JmJ-wa-x9j">
+            <objects>
+                <viewController id="bD3-oh-sIE" customClass="ProfileViewController" customModule="Technical_Task_For_Flypika" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ho8-Ng-OP6">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="adP-Pg-UiM">
+                                <rect key="frame" x="0.0" y="44" width="390" height="717"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="70" id="lsd-Gg-Z2k" customClass="ProfileTableViewCell" customModule="Technical_Task_For_Flypika" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lsd-Gg-Z2k" id="rgT-PX-a5q">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="2C8-Js-Rxw">
+                                                    <rect key="frame" x="40" y="24.666666666666664" width="25" height="21.666666666666664"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="25" id="0JN-Cv-F9f"/>
+                                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="25" id="8yD-cF-pzl"/>
+                                                        <constraint firstAttribute="height" constant="25" id="Th1-T9-49g"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="Wsq-Ss-saB"/>
+                                                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="25" id="hDM-KY-aTb"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="25" id="t4N-sT-a1H"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ykR-50-9HO">
+                                                    <rect key="frame" x="80" y="24.666666666666671" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="1"/>
+                                            <constraints>
+                                                <constraint firstItem="2C8-Js-Rxw" firstAttribute="leading" secondItem="rgT-PX-a5q" secondAttribute="leadingMargin" constant="20" id="6mZ-2H-1gv"/>
+                                                <constraint firstItem="2C8-Js-Rxw" firstAttribute="centerY" secondItem="rgT-PX-a5q" secondAttribute="centerY" id="iSU-uC-8ff"/>
+                                                <constraint firstItem="ykR-50-9HO" firstAttribute="centerY" secondItem="rgT-PX-a5q" secondAttribute="centerY" id="kv4-KA-5RK"/>
+                                                <constraint firstItem="ykR-50-9HO" firstAttribute="leading" secondItem="2C8-Js-Rxw" secondAttribute="trailing" constant="15" id="zbG-fV-z5s"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="icon" destination="2C8-Js-Rxw" id="XBt-MI-VMp"/>
+                                            <outlet property="profileInfoText" destination="ykR-50-9HO" id="amx-l9-TMS"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="bD3-oh-sIE" id="zVc-Jg-hAG"/>
+                                    <outlet property="delegate" destination="bD3-oh-sIE" id="xIf-Kz-m2U"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cSe-dC-cTj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="adP-Pg-UiM" firstAttribute="leading" secondItem="cSe-dC-cTj" secondAttribute="leading" id="QZ0-SI-jDw"/>
+                            <constraint firstItem="adP-Pg-UiM" firstAttribute="trailing" secondItem="cSe-dC-cTj" secondAttribute="trailing" id="hVE-sy-TvG"/>
+                            <constraint firstItem="adP-Pg-UiM" firstAttribute="top" secondItem="cSe-dC-cTj" secondAttribute="top" id="oN9-Gg-mP0"/>
+                            <constraint firstItem="adP-Pg-UiM" firstAttribute="bottom" secondItem="cSe-dC-cTj" secondAttribute="bottom" id="tQt-SB-mLl"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="profile" id="S3O-Te-jl9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v0J-Tb-8kW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-278.46153846153845" y="249.52606635071089"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="News" width="20" height="20"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="profile" width="24.333333969116211" height="20"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,612 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		490FD95C2688C4A10098E6DB /* NewsFeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490FD9552688C4A10098E6DB /* NewsFeedPresenter.swift */; };
+		490FD95D2688C4A10098E6DB /* NewsFeedWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490FD9562688C4A10098E6DB /* NewsFeedWorker.swift */; };
+		490FD95E2688C4A10098E6DB /* NewsFeedRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490FD9572688C4A10098E6DB /* NewsFeedRouter.swift */; };
+		490FD95F2688C4A10098E6DB /* NewsFeedModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490FD9582688C4A10098E6DB /* NewsFeedModels.swift */; };
+		490FD9602688C4A10098E6DB /* NewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490FD9592688C4A10098E6DB /* NewsFeedViewController.swift */; };
+		490FD9612688C4A10098E6DB /* NewsFeedInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490FD95A2688C4A10098E6DB /* NewsFeedInteractor.swift */; };
+		494342B6268A3F410056E9B9 /* NewsFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494342B5268A3F410056E9B9 /* NewsFeedCell.swift */; };
+		494342B8268A40190056E9B9 /* NewsFeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 494342B7268A40190056E9B9 /* NewsFeedCell.xib */; };
+		4967D9B5268B7674006BDB4D /* FeedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4967D9B4268B7674006BDB4D /* FeedResponse.swift */; };
+		4967D9BC268B76B7006BDB4D /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4967D9BB268B76B7006BDB4D /* NetworkService.swift */; };
+		4967D9BE268B76C8006BDB4D /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4967D9BD268B76C8006BDB4D /* NetworkDataFetcher.swift */; };
+		4967D9C0268B76DC006BDB4D /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4967D9BF268B76DC006BDB4D /* API.swift */; };
+		497D204226878C1A00A6AC09 /* VKSdkFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494E816526878713001376A1 /* VKSdkFramework.framework */; };
+		497D204326878C1A00A6AC09 /* VKSdkFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 494E816526878713001376A1 /* VKSdkFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		49832C392689070200E71BE3 /* AuthViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49832C382689070200E71BE3 /* AuthViewController.storyboard */; };
+		498BFC672687D04600AF1D98 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498BFC662687D04600AF1D98 /* AuthViewController.swift */; };
+		499FE2A52685EE4C0058DFD1 /* TabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 499FE2A42685EE4C0058DFD1 /* TabBarController.storyboard */; };
+		499FE2A72685EEE10058DFD1 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499FE2A62685EEE10058DFD1 /* TabBarController.swift */; };
+		499FE2AA2685EFC20058DFD1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499FE2A92685EFC20058DFD1 /* ProfileViewController.swift */; };
+		499FE2AC2685EFE90058DFD1 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499FE2AB2685EFE90058DFD1 /* ProfileTableViewCell.swift */; };
+		49EB52532685E9EF0043639A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49EB52522685E9EF0043639A /* AppDelegate.swift */; };
+		49EB52552685E9EF0043639A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49EB52542685E9EF0043639A /* SceneDelegate.swift */; };
+		49EB525C2685E9F10043639A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49EB525B2685E9F10043639A /* Assets.xcassets */; };
+		49EB525F2685E9F10043639A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49EB525D2685E9F10043639A /* LaunchScreen.storyboard */; };
+		49EDAA762687C69F00C9AA43 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49EDAA752687C69F00C9AA43 /* AuthService.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		494E816026878713001376A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 494E815926878713001376A1 /* VK-ios-sdk.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F3C7542D182133CC00964716;
+			remoteInfo = VKSdk;
+		};
+		494E816226878713001376A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 494E815926878713001376A1 /* VK-ios-sdk.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F3BACC401865905B003158DA;
+			remoteInfo = VKSdkResources;
+		};
+		494E816426878713001376A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 494E815926878713001376A1 /* VK-ios-sdk.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F34670311B8B7C5A003EF74B;
+			remoteInfo = VKSdkFramework;
+		};
+		494E816626878713001376A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 494E815926878713001376A1 /* VK-ios-sdk.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F3C58CCD1D213B2C005E94B5;
+			remoteInfo = VKSdkTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		497D204426878C1A00A6AC09 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				497D204326878C1A00A6AC09 /* VKSdkFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		490FD9552688C4A10098E6DB /* NewsFeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedPresenter.swift; sourceTree = "<group>"; };
+		490FD9562688C4A10098E6DB /* NewsFeedWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedWorker.swift; sourceTree = "<group>"; };
+		490FD9572688C4A10098E6DB /* NewsFeedRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedRouter.swift; sourceTree = "<group>"; };
+		490FD9582688C4A10098E6DB /* NewsFeedModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedModels.swift; sourceTree = "<group>"; };
+		490FD9592688C4A10098E6DB /* NewsFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedViewController.swift; sourceTree = "<group>"; };
+		490FD95A2688C4A10098E6DB /* NewsFeedInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedInteractor.swift; sourceTree = "<group>"; };
+		494342B5268A3F410056E9B9 /* NewsFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedCell.swift; sourceTree = "<group>"; };
+		494342B7268A40190056E9B9 /* NewsFeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsFeedCell.xib; sourceTree = "<group>"; };
+		494E81552687847A001376A1 /* VKSdkFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VKSdkFramework.h; path = "Carthage/Checkouts/vk-ios-sdk/library/DynamicFramework/VKSdkFramework.h"; sourceTree = "<group>"; };
+		494E815926878713001376A1 /* VK-ios-sdk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "VK-ios-sdk.xcodeproj"; path = "Carthage/Checkouts/vk-ios-sdk/VK-ios-sdk.xcodeproj"; sourceTree = "<group>"; };
+		4967D9B4268B7674006BDB4D /* FeedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedResponse.swift; sourceTree = "<group>"; };
+		4967D9BB268B76B7006BDB4D /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		4967D9BD268B76C8006BDB4D /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
+		4967D9BF268B76DC006BDB4D /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		4975B279268780CE005DB924 /* VKSdkFramework */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = VKSdkFramework; path = Carthage/Build/iOS/VKSdkFramework.framework/VKSdkFramework; sourceTree = "<group>"; };
+		49832C382689070200E71BE3 /* AuthViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AuthViewController.storyboard; sourceTree = "<group>"; };
+		498773972687830600A1726F /* VKSdkFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VKSdkFramework.framework; path = Carthage/Build/iOS/VKSdkFramework.framework; sourceTree = "<group>"; };
+		498BFC662687D04600AF1D98 /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		499FE2A42685EE4C0058DFD1 /* TabBarController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarController.storyboard; sourceTree = "<group>"; };
+		499FE2A62685EEE10058DFD1 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		499FE2A92685EFC20058DFD1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		499FE2AB2685EFE90058DFD1 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		49EB524F2685E9EF0043639A /* Technical_Task_For_Flypika.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Technical_Task_For_Flypika.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		49EB52522685E9EF0043639A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		49EB52542685E9EF0043639A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		49EB525B2685E9F10043639A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		49EB525E2685E9F10043639A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		49EB52602685E9F10043639A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49EDAA752687C69F00C9AA43 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		49EB524C2685E9EF0043639A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				497D204226878C1A00A6AC09 /* VKSdkFramework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		490FD9502688C4280098E6DB /* NewsFeed */ = {
+			isa = PBXGroup;
+			children = (
+				494342B0268A3F250056E9B9 /* NewsFeedCell */,
+				490FD9592688C4A10098E6DB /* NewsFeedViewController.swift */,
+				490FD95A2688C4A10098E6DB /* NewsFeedInteractor.swift */,
+				490FD9552688C4A10098E6DB /* NewsFeedPresenter.swift */,
+				490FD9582688C4A10098E6DB /* NewsFeedModels.swift */,
+				490FD9562688C4A10098E6DB /* NewsFeedWorker.swift */,
+				490FD9572688C4A10098E6DB /* NewsFeedRouter.swift */,
+			);
+			path = NewsFeed;
+			sourceTree = "<group>";
+		};
+		494342B0268A3F250056E9B9 /* NewsFeedCell */ = {
+			isa = PBXGroup;
+			children = (
+				494342B5268A3F410056E9B9 /* NewsFeedCell.swift */,
+				494342B7268A40190056E9B9 /* NewsFeedCell.xib */,
+			);
+			path = NewsFeedCell;
+			sourceTree = "<group>";
+		};
+		494E815A26878713001376A1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				494E816126878713001376A1 /* libVKSdk.a */,
+				494E816326878713001376A1 /* VKSdkResources.bundle */,
+				494E816526878713001376A1 /* VKSdkFramework.framework */,
+				494E816726878713001376A1 /* VKSdkTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4967D9BA268B767D006BDB4D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4967D9B4268B7674006BDB4D /* FeedResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4975B278268780CE005DB924 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				494E815926878713001376A1 /* VK-ios-sdk.xcodeproj */,
+				494E81552687847A001376A1 /* VKSdkFramework.h */,
+				498773972687830600A1726F /* VKSdkFramework.framework */,
+				4975B279268780CE005DB924 /* VKSdkFramework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		499FE2A32685EE260058DFD1 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				499FE2A82685EF9D0058DFD1 /* profile */,
+				499FE2A62685EEE10058DFD1 /* TabBarController.swift */,
+				499FE2A42685EE4C0058DFD1 /* TabBarController.storyboard */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		499FE2A82685EF9D0058DFD1 /* profile */ = {
+			isa = PBXGroup;
+			children = (
+				499FE2A92685EFC20058DFD1 /* ProfileViewController.swift */,
+				499FE2AB2685EFE90058DFD1 /* ProfileTableViewCell.swift */,
+			);
+			path = profile;
+			sourceTree = "<group>";
+		};
+		49EB52462685E9EF0043639A = {
+			isa = PBXGroup;
+			children = (
+				49EB52512685E9EF0043639A /* Technical_Task_For_Flypika */,
+				49EB52502685E9EF0043639A /* Products */,
+				4975B278268780CE005DB924 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		49EB52502685E9EF0043639A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				49EB524F2685E9EF0043639A /* Technical_Task_For_Flypika.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		49EB52512685E9EF0043639A /* Technical_Task_For_Flypika */ = {
+			isa = PBXGroup;
+			children = (
+				49EB52672685EA0E0043639A /* Application */,
+				49EB52662685E9FC0043639A /* Auth */,
+				490FD9502688C4280098E6DB /* NewsFeed */,
+				499FE2A32685EE260058DFD1 /* TabBar */,
+				49EB525B2685E9F10043639A /* Assets.xcassets */,
+				49EB525D2685E9F10043639A /* LaunchScreen.storyboard */,
+				49EB52602685E9F10043639A /* Info.plist */,
+			);
+			path = Technical_Task_For_Flypika;
+			sourceTree = "<group>";
+		};
+		49EB52662685E9FC0043639A /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				498BFC662687D04600AF1D98 /* AuthViewController.swift */,
+				49832C382689070200E71BE3 /* AuthViewController.storyboard */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		49EB52672685EA0E0043639A /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				4967D9BA268B767D006BDB4D /* Models */,
+				49EB52522685E9EF0043639A /* AppDelegate.swift */,
+				49EB52542685E9EF0043639A /* SceneDelegate.swift */,
+				49EDAA752687C69F00C9AA43 /* AuthService.swift */,
+				4967D9BB268B76B7006BDB4D /* NetworkService.swift */,
+				4967D9BD268B76C8006BDB4D /* NetworkDataFetcher.swift */,
+				4967D9BF268B76DC006BDB4D /* API.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		49EB524E2685E9EF0043639A /* Technical_Task_For_Flypika */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49EB52632685E9F10043639A /* Build configuration list for PBXNativeTarget "Technical_Task_For_Flypika" */;
+			buildPhases = (
+				49EB524B2685E9EF0043639A /* Sources */,
+				49EB524C2685E9EF0043639A /* Frameworks */,
+				49EB524D2685E9EF0043639A /* Resources */,
+				4975B27726877C8F005DB924 /* ShellScript */,
+				497D204426878C1A00A6AC09 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Technical_Task_For_Flypika;
+			productName = Technical_Task_For_Flypika;
+			productReference = 49EB524F2685E9EF0043639A /* Technical_Task_For_Flypika.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		49EB52472685E9EF0043639A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					49EB524E2685E9EF0043639A = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+				};
+			};
+			buildConfigurationList = 49EB524A2685E9EF0043639A /* Build configuration list for PBXProject "Technical_Task_For_Flypika" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 49EB52462685E9EF0043639A;
+			productRefGroup = 49EB52502685E9EF0043639A /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 494E815A26878713001376A1 /* Products */;
+					ProjectRef = 494E815926878713001376A1 /* VK-ios-sdk.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				49EB524E2685E9EF0043639A /* Technical_Task_For_Flypika */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		494E816126878713001376A1 /* libVKSdk.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libVKSdk.a;
+			remoteRef = 494E816026878713001376A1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		494E816326878713001376A1 /* VKSdkResources.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = VKSdkResources.bundle;
+			remoteRef = 494E816226878713001376A1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		494E816526878713001376A1 /* VKSdkFramework.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = VKSdkFramework.framework;
+			remoteRef = 494E816426878713001376A1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		494E816726878713001376A1 /* VKSdkTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = VKSdkTests.xctest;
+			remoteRef = 494E816626878713001376A1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		49EB524D2685E9EF0043639A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				499FE2A52685EE4C0058DFD1 /* TabBarController.storyboard in Resources */,
+				494342B8268A40190056E9B9 /* NewsFeedCell.xib in Resources */,
+				49832C392689070200E71BE3 /* AuthViewController.storyboard in Resources */,
+				49EB525F2685E9F10043639A /* LaunchScreen.storyboard in Resources */,
+				49EB525C2685E9F10043639A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4975B27726877C8F005DB924 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage outdated --xcode-warnings 2>/dev/null\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		49EB524B2685E9EF0043639A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				490FD95F2688C4A10098E6DB /* NewsFeedModels.swift in Sources */,
+				4967D9B5268B7674006BDB4D /* FeedResponse.swift in Sources */,
+				490FD95E2688C4A10098E6DB /* NewsFeedRouter.swift in Sources */,
+				499FE2A72685EEE10058DFD1 /* TabBarController.swift in Sources */,
+				499FE2AA2685EFC20058DFD1 /* ProfileViewController.swift in Sources */,
+				494342B6268A3F410056E9B9 /* NewsFeedCell.swift in Sources */,
+				499FE2AC2685EFE90058DFD1 /* ProfileTableViewCell.swift in Sources */,
+				490FD9612688C4A10098E6DB /* NewsFeedInteractor.swift in Sources */,
+				490FD95C2688C4A10098E6DB /* NewsFeedPresenter.swift in Sources */,
+				4967D9BE268B76C8006BDB4D /* NetworkDataFetcher.swift in Sources */,
+				490FD95D2688C4A10098E6DB /* NewsFeedWorker.swift in Sources */,
+				4967D9BC268B76B7006BDB4D /* NetworkService.swift in Sources */,
+				49EB52532685E9EF0043639A /* AppDelegate.swift in Sources */,
+				498BFC672687D04600AF1D98 /* AuthViewController.swift in Sources */,
+				49EB52552685E9EF0043639A /* SceneDelegate.swift in Sources */,
+				49EDAA762687C69F00C9AA43 /* AuthService.swift in Sources */,
+				4967D9C0268B76DC006BDB4D /* API.swift in Sources */,
+				490FD9602688C4A10098E6DB /* NewsFeedViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		49EB525D2685E9F10043639A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49EB525E2685E9F10043639A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		49EB52612685E9F10043639A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		49EB52622685E9F10043639A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		49EB52642685E9F10043639A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4D59855NLU;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = Technical_Task_For_Flypika/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/VKSdkFramework.framework",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "BGP.Technical-Task-For-Flypika";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		49EB52652685E9F10043639A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4D59855NLU;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = Technical_Task_For_Flypika/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/VKSdkFramework.framework",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "BGP.Technical-Task-For-Flypika";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		49EB524A2685E9EF0043639A /* Build configuration list for PBXProject "Technical_Task_For_Flypika" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49EB52612685E9F10043639A /* Debug */,
+				49EB52622685E9F10043639A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49EB52632685E9F10043639A /* Build configuration list for PBXNativeTarget "Technical_Task_For_Flypika" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49EB52642685E9F10043639A /* Debug */,
+				49EB52652685E9F10043639A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 49EB52472685E9EF0043639A /* Project object */;
+}
